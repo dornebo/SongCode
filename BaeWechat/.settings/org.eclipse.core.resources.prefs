@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//src/main/java/com/chat/BaeWechat/dao/DaoSupport.java=UTF-8
+encoding//src/main/java/com/chat/BaeWechat/interceptor/LoginHandlerInterceptor.java=UTF-8
+encoding//src/main/java/com/chat/BaeWechat/interceptor/shiro/ShiroRealm.java=UTF-8
+encoding//src/main/webapp/login.jsp=UTF-8
