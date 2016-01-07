@@ -10,14 +10,15 @@ import org.springframework.web.servlet.ModelAndView;
 import party.w0412.cxdchat.util.PageData;
 
 /**
- * ÏîÄ¿Ãû³Æ£ºBaeWechat   
- * ÀàÃû³Æ£ºBaseController   
- * ÀàÃèÊö£º   
- * ´´½¨ÈË£ºSongcxd
- * ´´½¨Ê±¼ä£º2015Äê12ÔÂ1ÈÕ ÏÂÎç5:22:18   
- * ĞŞ¸ÄÈË£º
- * ĞŞ¸ÄÊ±¼ä£º 
- * ĞŞ¸Ä±¸×¢£º   
+ *    
+ * é¡¹ç›®åç§°ï¼šcxdchat   
+ * ç±»åç§°ï¼šBaseController   
+ * ç±»æè¿°ï¼š   
+ * åˆ›å»ºäººï¼šSongcxd
+ * åˆ›å»ºæ—¶é—´ï¼š2016å¹´1æœˆ7æ—¥ ä¸‹åˆ4:08:37   
+ * ä¿®æ”¹äººï¼š
+ * ä¿®æ”¹æ—¶é—´ï¼š 
+ * ä¿®æ”¹å¤‡æ³¨ï¼š   
  * @version    
  *
  */
@@ -30,21 +31,21 @@ public class BaseController {
 	private static final long serialVersionUID = 6357869213649815390L;
 	
 	/**
-	 * µÃµ½PageData
+	 * ï¿½Ãµï¿½PageData
 	 */
 	public PageData getPageData(){
 		return new PageData(this.getRequest());
 	}
 	
 	/**
-	 * µÃµ½ModelAndView
+	 * ï¿½Ãµï¿½ModelAndView
 	 */
 	public ModelAndView getModelAndView(){
 		return new ModelAndView();
 	}
 	
 	/**
-	 * µÃµ½request¶ÔÏó
+	 * ï¿½Ãµï¿½requestï¿½ï¿½ï¿½ï¿½
 	 */
 	public HttpServletRequest getRequest() {
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
