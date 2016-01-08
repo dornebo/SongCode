@@ -31,21 +31,21 @@ public class BaseController {
 	private static final long serialVersionUID = 6357869213649815390L;
 	
 	/**
-	 * �õ�PageData
+	 * 得到PageData
 	 */
 	public PageData getPageData(){
 		return new PageData(this.getRequest());
 	}
 	
 	/**
-	 * �õ�ModelAndView
+	 * 得到ModelAndView
 	 */
 	public ModelAndView getModelAndView(){
 		return new ModelAndView();
 	}
 	
 	/**
-	 * �õ�request����
+	 * 得到request对象
 	 */
 	public HttpServletRequest getRequest() {
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();

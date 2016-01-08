@@ -1,15 +1,12 @@
 package party.w0412.cxdchat.controller.wechat;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
-import party.w0412.cxdchat.service.WechatService;
-
+import org.sword.wechat4j.Wechat;
 
 /**
  * 项目名称：cxdchat   
@@ -27,8 +24,8 @@ import party.w0412.cxdchat.service.WechatService;
 @RequestMapping(value = "wechat")
 public class WechatController {
 	
-	@Resource(name = "wechatService")
-	private WechatService wechatService;
+	/*@Resource(name = "wechatService")
+	private WechatService wechatService;*/
 
 	/**
 	 * 
@@ -44,7 +41,8 @@ public class WechatController {
 	@ResponseBody
 	@RequestMapping(value = "/callback", produces = "text/xml;charset=UTF-8")
 	public void callback(HttpServletRequest request, HttpServletResponse response) throws Exception {
-	        String result = wechatService.execute();
+			Wechat wc = new Wechat(request);
+	        String result = wc.execute();
 	        response.getOutputStream().write(result.getBytes());
 	}
 

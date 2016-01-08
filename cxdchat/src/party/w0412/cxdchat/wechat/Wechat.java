@@ -1,24 +1,19 @@
-package party.w0412.cxdchat.service;
+package party.w0412.cxdchat.wechat;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.springframework.stereotype.Service;
 import org.sword.wechat4j.WechatSupport;
 
-@Service("wechatService")
-public class WechatService extends WechatSupport {
+public class Wechat extends WechatSupport {
 
-	
-	public WechatService() {
-		super();
-	}
-
-	public WechatService(HttpServletRequest request) {
+	public Wechat(HttpServletRequest request) {
 		super(request);
+		// TODO Auto-generated constructor stub
 	}
-	
+
 	@Override
 	protected void onText() {
+		// TODO Auto-generated method stub
 		this.wechatRequest.getFromUserName();
         String content = "test ok";
         responseText(content);
@@ -161,6 +156,5 @@ public class WechatService extends WechatSupport {
 		// TODO Auto-generated method stub
 		
 	}
-
 
 }
